@@ -1,0 +1,7 @@
+<h1>Yielp de ouf bien moche</h1>
+<%= link_to 'Add a restaurant', new_restaurant_path %>
+<ul>
+<% @restaurants.each do |resto| %>
+  <li><%= link_to resto.name, restaurant_reviews_path(resto[:id]) %></li>
+<% end %>
+</ul>

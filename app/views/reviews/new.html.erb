@@ -1,0 +1,8 @@
+<%= link_to 'Back to Yelp', restaurants_path %>
+
+<%= @restaurant.name %>
+<%= simple_form_for ([@restaurant, @review]) do |f| %>
+  <%= f.input :content %>
+  <%= f.input :rating %>
+  <%= f.submit "add a review", class: "btn btn-primary" %>
+<% end %>
